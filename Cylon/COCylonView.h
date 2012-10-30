@@ -1,5 +1,5 @@
 //
-//  COViewController.h
+//  COCylonView.h
 //  Cylon
 //
 //  Created by Mat Trudel on 2012-10-28.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface COViewController : UIViewController
+@interface COCylonView : UIView
 
 @end

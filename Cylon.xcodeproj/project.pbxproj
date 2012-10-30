@@ -16,8 +16,8 @@
 		403BBF94163E1E5900F0E812 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 403BBF93163E1E5900F0E812 /* Default.png */; };
 		403BBF96163E1E5900F0E812 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 403BBF95163E1E5900F0E812 /* Default@2x.png */; };
 		403BBF98163E1E5900F0E812 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 403BBF97163E1E5900F0E812 /* Default-568h@2x.png */; };
-		403BBF9B163E1E5900F0E812 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 403BBF99163E1E5900F0E812 /* MainStoryboard.storyboard */; };
-		403BBF9E163E1E5900F0E812 /* COViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 403BBF9D163E1E5900F0E812 /* COViewController.m */; };
+		403BBFA8163E1EE900F0E812 /* COCylonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 403BBFA7163E1EE900F0E812 /* COCylonView.m */; };
+		403BBFAA163E1F8600F0E812 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 403BBFA9163E1F8600F0E812 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		403BBF93163E1E5900F0E812 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		403BBF95163E1E5900F0E812 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		403BBF97163E1E5900F0E812 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		403BBF9A163E1E5900F0E812 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		403BBF9C163E1E5900F0E812 /* COViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = COViewController.h; sourceTree = "<group>"; };
-		403BBF9D163E1E5900F0E812 /* COViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = COViewController.m; sourceTree = "<group>"; };
+		403BBFA6163E1EE900F0E812 /* COCylonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = COCylonView.h; sourceTree = "<group>"; };
+		403BBFA7163E1EE900F0E812 /* COCylonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = COCylonView.m; sourceTree = "<group>"; };
+		403BBFA9163E1F8600F0E812 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				403BBFAA163E1F8600F0E812 /* QuartzCore.framework in Frameworks */,
 				403BBF82163E1E5900F0E812 /* UIKit.framework in Frameworks */,
 				403BBF84163E1E5900F0E812 /* Foundation.framework in Frameworks */,
 				403BBF86163E1E5900F0E812 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +74,7 @@
 		403BBF80163E1E5900F0E812 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				403BBFA9163E1F8600F0E812 /* QuartzCore.framework */,
 				403BBF81163E1E5900F0E812 /* UIKit.framework */,
 				403BBF83163E1E5900F0E812 /* Foundation.framework */,
 				403BBF85163E1E5900F0E812 /* CoreGraphics.framework */,
@@ -85,9 +87,8 @@
 			children = (
 				403BBF90163E1E5900F0E812 /* COAppDelegate.h */,
 				403BBF91163E1E5900F0E812 /* COAppDelegate.m */,
-				403BBF99163E1E5900F0E812 /* MainStoryboard.storyboard */,
-				403BBF9C163E1E5900F0E812 /* COViewController.h */,
-				403BBF9D163E1E5900F0E812 /* COViewController.m */,
+				403BBFA6163E1EE900F0E812 /* COCylonView.h */,
+				403BBFA7163E1EE900F0E812 /* COCylonView.m */,
 				403BBF88163E1E5900F0E812 /* Supporting Files */,
 			);
 			path = Cylon;
@@ -163,7 +164,6 @@
 				403BBF94163E1E5900F0E812 /* Default.png in Resources */,
 				403BBF96163E1E5900F0E812 /* Default@2x.png in Resources */,
 				403BBF98163E1E5900F0E812 /* Default-568h@2x.png in Resources */,
-				403BBF9B163E1E5900F0E812 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +176,7 @@
 			files = (
 				403BBF8E163E1E5900F0E812 /* main.m in Sources */,
 				403BBF92163E1E5900F0E812 /* COAppDelegate.m in Sources */,
-				403BBF9E163E1E5900F0E812 /* COViewController.m in Sources */,
+				403BBFA8163E1EE900F0E812 /* COCylonView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +189,6 @@
 				403BBF8B163E1E5900F0E812 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		403BBF99163E1E5900F0E812 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				403BBF9A163E1E5900F0E812 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -293,6 +285,7 @@
 				403BBFA3163E1E5900F0E812 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
