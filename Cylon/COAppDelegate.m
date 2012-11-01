@@ -9,12 +9,26 @@
 #import "COAppDelegate.h"
 #import "COCylonView.h"
 
+@interface COAppDelegate ()
+@property (strong, nonatomic) COCylonView *cylonView;
+@end
+
 @implementation COAppDelegate
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  [self.window addSubview:[[COCylonView alloc] initWithFrame:[self.window bounds]]];
+  self.cylonView = [[COCylonView alloc] initWithFrame:[self.window bounds]];
+  [self.window addSubview:self.cylonView];
   [self.window makeKeyAndVisible];
+  [self.cylonView startWubWub];
+}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+  [self.cylonView startWubWub];
+}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+  [self.cylonView stopWubWub];
 }
 
 @end

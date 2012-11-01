@@ -22,8 +22,6 @@
     backgroundLayer.endPoint = CGPointMake(.5, 1.);
     backgroundLayer.locations = @[@0,@0,@1];
     backgroundLayer.colors = @[(id)[[UIColor blackColor] CGColor],(id)[[UIColor redColor] CGColor],(id)[[UIColor blackColor] CGColor]];
-
-    [self startWubWub];
   }
   return self;
 }
@@ -38,6 +36,10 @@
   animation.autoreverses = YES;
   animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
   [self.layer addAnimation:animation forKey:@"animateGradient"];
+}
+
+- (void)stopWubWub {
+  [self.layer removeAllAnimations];
 }
 
 @end

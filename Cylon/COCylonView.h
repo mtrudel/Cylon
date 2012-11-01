@@ -10,4 +10,7 @@
 
 @interface COCylonView : UIView
 
+- (void)startWubWub;
+- (void)stopWubWub;
+
 @end
