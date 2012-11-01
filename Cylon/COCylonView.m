@@ -16,7 +16,7 @@
 }
 
 - (id)initWithFrame:(CGRect)frame {
-  if (self = [super initWithFrame:CGRectInset(frame, (frame.size.width - 20) / 2, 0)]) {
+  if (self = [super initWithFrame:frame]) {
     CAGradientLayer *backgroundLayer = (CAGradientLayer *)self.layer;
     backgroundLayer.startPoint = CGPointMake(.5, 0.);
     backgroundLayer.endPoint = CGPointMake(.5, 1.);
