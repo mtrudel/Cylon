@@ -16,6 +16,8 @@
 @implementation COAppDelegate
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
+  [[UIScreen mainScreen] setBrightness:1.0];
+  [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   self.cylonView = [[COCylonView alloc] initWithFrame:[self.window bounds]];
   [self.window addSubview:self.cylonView];
